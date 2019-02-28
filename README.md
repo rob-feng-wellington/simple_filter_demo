@@ -8,6 +8,11 @@ npm start
 ```
 Browse to [http://localhost:8080](http://localhost:8080)
 
+## TODO
+* sync filter values with url params
+* Refactoring the code with hooks
+
+
 The exercise is to clean up this code and put it in a sensible structure, using the best of idiomatic ES, modern libraries, and frameworks possible. The application runs correctly, but there's a lot of duplication and tangling of concerns, the rendering is all server-side, and its filtering use case is limited.
 
 ## Important - the requirements
