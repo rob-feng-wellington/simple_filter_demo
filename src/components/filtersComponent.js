@@ -47,6 +47,7 @@ const Filters = ({ name, gender, age, onChangeName, onChangeGender, onChangeAge 
           min={MIN_AGE_DEFAULT}
           max={MAX_AGE_DEFAULT}
           defaultValue={[age.min, age.max]}
+          value={[age.min, age.max]}
           onChange={onChangeAge}
         />
         <div style={{ 

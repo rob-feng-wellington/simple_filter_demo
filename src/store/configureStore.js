@@ -1,9 +1,15 @@
 import { createBrowserHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
+import urlSyncMiddleware from '../middlewares/urlSync';
+import locationMiddleWare from '../middlewares/location';
 import createRootReducer from '../reducers';
+import { createLogger } from 'redux-logger';
 
 export const history = createBrowserHistory();
+const devLogger = createLogger({
+  collapsed: true
+});
 
 export default function configureStore(preloadedState) {
   const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -13,6 +19,9 @@ export default function configureStore(preloadedState) {
     composeEnhancer(
       applyMiddleware(
         routerMiddleware(history),
+        urlSyncMiddleware,
+        locationMiddleWare,
+        devLogger
       ),
     ),
   );

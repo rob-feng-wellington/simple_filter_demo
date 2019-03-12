@@ -5,13 +5,13 @@ import { ConnectedRouter } from 'connected-react-router';
 import FiltersContainer from './containers/filtersContainer';
 import PeopleListContainer from './containers/peopleListContainer';
 
-const Home = () => (
+const Home = () => 
   <div>
     <FiltersContainer />
     <hr />
     <PeopleListContainer />
   </div>
-);
+;
 
 const App = ({ history }) => {
   return (
